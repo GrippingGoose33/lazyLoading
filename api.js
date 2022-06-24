@@ -2,7 +2,7 @@ function* genItems() {
     let cnt = 0;
 
     while (true) {
-        yield `Items ${cnt}`
+        yield `Items ${cnt++}`
     }
 }
 

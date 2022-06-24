@@ -7,7 +7,7 @@ function List({data, fetchItems, refreshItems, isRefreshing}) {
     return (
         <FlatList
         data = {data}
-        refreshItems = {({item}) => <Text style={styles.item}>{item.value}</Text>}
+        renderItems = {({item}) => <Text style={styles.item}>{item.value}</Text>}
         onEndReached = {fetchItems}
         onRefresh = {refreshItems}
         refreshing = {isRefreshing}
@@ -19,7 +19,7 @@ List.propTypes = {
     data: PropTypes.array.isRequired,
     fetchItems: PropTypes.func.isRequired,
     refreshItems: PropTypes.func.isRequired,
-    isRefreshing: PropTypes.bool.isRequired
+    isRefreshing: PropTypes.bool.isRequired,
 }
 
 export default List;
